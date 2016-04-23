@@ -2,8 +2,8 @@ library(data.table)
 library(plyr)
 library(dplyr)
 
-setwd("c://Datascince")
-Downloading and unzipping dataset
+
+##Downloading and unzipping dataset
 if(!file.exists("./c3w4")){dir.create("./c3w4")}
 fileurl <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
 download.file(fileurl,destfile="./c3w4/Dataset.zip")
@@ -13,7 +13,7 @@ unzip(zipfile="./c3w4/Dataset.zip",exdir="./c3w4")
 ##Merges the training and the test sets to create one data set.
 
 ## 2.1 Reading files
-Read Training data
+## Read Training data
 subtrain <- read.table("./c3w4/UCI HAR Dataset/train/subject_train.txt")
 xtrain <- read.table("./c3w4/UCI HAR Dataset/train/X_train.txt")
 ytrain <- read.table("./c3w4/UCI HAR Dataset/train/Y_train.txt")
